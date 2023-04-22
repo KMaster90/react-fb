@@ -17,10 +17,6 @@ html, body {
 }
 
 .page-sm {
-  /* Nel video utilizzo le seguenti classi Tailwind: : */
-  /* @apply max-w-screen-sm mx-auto */
-
-  /* FIX: consiglio però di utilizzare le seguenti:  */
   @apply  max-w-sm mx-auto
 }
 

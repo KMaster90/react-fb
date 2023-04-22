@@ -1,13 +1,13 @@
 import "./App.css";
 import React from "react";
 import {Outlet} from "react-router-dom";
-import {NavBar} from "@/shared/index";
+import {NavBar} from "@/shared";
 
 export const App = () => {
     return (
         <>
             <NavBar/>
-            <div className="my-[6rem] ml-8">
+            <div className="my-[6rem] mx-8">
                 <Outlet/>
             </div>
         </>

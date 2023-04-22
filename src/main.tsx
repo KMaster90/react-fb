@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client'
 import {App} from './App'
 import './index.css'
 import {createBrowserRouter, Navigate, RouterProvider,} from "react-router-dom";
-import {CartPage, CheckoutPage, CmsPage, LoginPage, OrdersPage, ProductsPage, ShopPage, ThanksPage} from "@/pages/index";
+import {CartPage, CheckoutPage, CmsPage, LoginPage, OrdersPage, ProductsPage, ShopPage, ThanksPage} from "@/pages";
+import 'font-awesome/css/font-awesome.min.css';
 
 const router = createBrowserRouter([
     {
@@ -73,7 +74,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
+  <React.Fragment>
       <RouterProvider router={router} />
-  </React.StrictMode>,
+  </React.Fragment>,
 )
