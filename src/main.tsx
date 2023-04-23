@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import {App} from './App'
-import './index.css'
 import {createBrowserRouter, Navigate, RouterProvider,} from "react-router-dom";
-import {CartPage, CheckoutPage, CmsPage, LoginPage, OrdersPage, ProductsPage, ShopPage, ThanksPage} from "@/pages";
 import 'font-awesome/css/font-awesome.min.css';
+import {App} from './App'
+import {CartPage, CheckoutPage, CmsPage, LoginPage, OrdersPage, ProductsPage, ShopPage, ThanksPage} from "@/pages";
+import './index.css'
 
 const router = createBrowserRouter([
     {
@@ -28,7 +28,7 @@ const router = createBrowserRouter([
                 loader: async ()=>'load checkout',
             },
             {
-                path: "thank you",
+                path: "thankyou",
                 element: <ThanksPage />,
                 loader: async ()=>'load thank you',
             },

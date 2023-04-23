@@ -1,7 +1,7 @@
 import {NavLink} from "react-router-dom";
 import logo from '@/assets/laptop.png';
-import {CartPanel} from "./CartPanel";
-import {useCartPanel} from "@/services";
+import {selectCartIsEmpty, selectTotalCartItems, useCart, useCartPanel} from "@/services";
+import {CartPanel} from "@/shared";
 
 const isActive = (obj: { isActive: boolean }) =>
     obj.isActive ? 'text-xl text-sky-400 font-bold' : 'text-xl text-white';
@@ -9,6 +9,7 @@ const isActive = (obj: { isActive: boolean }) =>
 export const NavBar = ({className}: any) => {
     const isCartPanelOpen = useCartPanel(({open})=>open);
     const toggleCartPanel = useCartPanel(({toggle})=>toggle);
+    const isEmpty = useCart(selectCartIsEmpty);
     
     return (
         <div className={`fixed z-10 top-0 left-0 right-0 shadow-2xl ${className}`}>
@@ -22,8 +23,8 @@ export const NavBar = ({className}: any) => {
                 
                 {/*Cart Button Badge */}
                 <div>
-                    <button className="btn accent lg" onClick={toggleCartPanel}>
-                        Cart: 0
+                    <button disabled={isEmpty} className="btn accent lg" onClick={toggleCartPanel}>
+                        Cart: {useCart(selectTotalCartItems)}
                     </button>
                 </div>
                 

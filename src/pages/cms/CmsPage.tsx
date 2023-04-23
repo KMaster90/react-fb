@@ -1,5 +1,5 @@
-import {NavLink, Outlet} from "react-router-dom";
 import React from "react";
+import {NavLink, Outlet} from "react-router-dom";
 
 const isActive = (obj: {isActive: boolean}) => {
     return obj.isActive ? 'btn primary' : 'btn'

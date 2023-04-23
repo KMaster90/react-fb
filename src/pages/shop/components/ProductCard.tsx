@@ -1,4 +1,5 @@
 import {Product} from "@/model";
+
 interface ProductCartProps {
     product:Partial<Product>,
     onAddToCart:()=>void
